@@ -1,0 +1,7 @@
+# octave script:
+data1=load('/Users/davidemorelli/Projects/k-dense/results/kcore_2012.txt');
+data2=load('/Users/davidemorelli/Projects/k-dense/results/kdense_2012.txt');
+plot(data1(1:80,1), data1(1:80,2), ";k-core;", data2(1:80,1), data2(1:80,2), ";k-dense;");
+title("k-dense and k-core of AS in 2012");
+xlabel("k");
+ylabel("number of nodes");

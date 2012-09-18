@@ -1,0 +1,224 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E0B4AB1315D3019800A0EAC9 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = E0B4AB1215D3019800A0EAC9 /* main.c */; };
+		E0B4AB1515D3019800A0EAC9 /* KDense.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = E0B4AB1415D3019800A0EAC9 /* KDense.1 */; };
+		E0B4AB2715D3236200A0EAC9 /* libigraph.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E0B4AB2615D3236200A0EAC9 /* libigraph.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E0B4AB0C15D3019800A0EAC9 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				E0B4AB1515D3019800A0EAC9 /* KDense.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		E0B4AB0E15D3019800A0EAC9 /* KDense */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = KDense; sourceTree = BUILT_PRODUCTS_DIR; };
+		E0B4AB1215D3019800A0EAC9 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		E0B4AB1415D3019800A0EAC9 /* KDense.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = KDense.1; sourceTree = "<group>"; };
+		E0B4AB2615D3236200A0EAC9 /* libigraph.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libigraph.a; path = ../../../../../../usr/local/lib/libigraph.a; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E0B4AB0B15D3019800A0EAC9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E0B4AB2715D3236200A0EAC9 /* libigraph.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E0B4AB0315D3019800A0EAC9 = {
+			isa = PBXGroup;
+			children = (
+				E0B4AB2615D3236200A0EAC9 /* libigraph.a */,
+				E0B4AB1115D3019800A0EAC9 /* KDense */,
+				E0B4AB0F15D3019800A0EAC9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E0B4AB0F15D3019800A0EAC9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E0B4AB0E15D3019800A0EAC9 /* KDense */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E0B4AB1115D3019800A0EAC9 /* KDense */ = {
+			isa = PBXGroup;
+			children = (
+				E0B4AB1215D3019800A0EAC9 /* main.c */,
+				E0B4AB1415D3019800A0EAC9 /* KDense.1 */,
+			);
+			path = KDense;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E0B4AB0D15D3019800A0EAC9 /* KDense */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E0B4AB1815D3019800A0EAC9 /* Build configuration list for PBXNativeTarget "KDense" */;
+			buildPhases = (
+				E0B4AB0A15D3019800A0EAC9 /* Sources */,
+				E0B4AB0B15D3019800A0EAC9 /* Frameworks */,
+				E0B4AB0C15D3019800A0EAC9 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KDense;
+			productName = KDense;
+			productReference = E0B4AB0E15D3019800A0EAC9 /* KDense */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E0B4AB0515D3019800A0EAC9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = "Gabriele Cocco";
+			};
+			buildConfigurationList = E0B4AB0815D3019800A0EAC9 /* Build configuration list for PBXProject "KDense" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E0B4AB0315D3019800A0EAC9;
+			productRefGroup = E0B4AB0F15D3019800A0EAC9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E0B4AB0D15D3019800A0EAC9 /* KDense */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E0B4AB0A15D3019800A0EAC9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E0B4AB1315D3019800A0EAC9 /* main.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		E0B4AB1615D3019800A0EAC9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		E0B4AB1715D3019800A0EAC9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		E0B4AB1915D3019800A0EAC9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				LIBRARY_SEARCH_PATHS = "/usr/local/lib/**";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "/usr/local/include/**";
+			};
+			name = Debug;
+		};
+		E0B4AB1A15D3019800A0EAC9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				LIBRARY_SEARCH_PATHS = "/usr/local/lib/**";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "/usr/local/include/**";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E0B4AB0815D3019800A0EAC9 /* Build configuration list for PBXProject "KDense" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E0B4AB1615D3019800A0EAC9 /* Debug */,
+				E0B4AB1715D3019800A0EAC9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E0B4AB1815D3019800A0EAC9 /* Build configuration list for PBXNativeTarget "KDense" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E0B4AB1915D3019800A0EAC9 /* Debug */,
+				E0B4AB1A15D3019800A0EAC9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E0B4AB0515D3019800A0EAC9 /* Project object */;
+}
