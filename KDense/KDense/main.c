@@ -11,10 +11,10 @@
 #include <string.h>
 #include <stdlib.h>
 
-#define DATA_FILE "/Users/Gabriele/Desktop/topology_2012.txt"
-#define KCORE_OUT_FILE "/Users/Gabriele/Desktop/kcore_2012_true.txt"
-#define KDENSE_OUT_FILE "/Users/Gabriele/Desktop/kdense_2012.txt"
-#define INFO_FILE "/Users/Gabriele/Desktop/info_2012.txt"
+#define DATA_FILE "/Users/Gabriele/Desktop/del/k-dense/topologie/topology_2012.txt"
+#define KCORE_OUT_FILE "/Users/Gabriele/Desktop/del/k-dense/topologie/kcore_2012_true.txt"
+#define KDENSE_OUT_FILE "/Users/Gabriele/Desktop/del/k-dense/topologie/kdense_2012.txt"
+#define INFO_FILE "/Users/Gabriele/Desktop/del/k-dense/topologie/info_2012.txt"
 #define MAX_STRING_LENGTH 256
 
 int igraph_kdense(const igraph_t *graph,
@@ -316,34 +316,34 @@ int main(int argc, const char * argv[])
         fprintf(info_file, "Method %d\n", i + 1);
         
         igraph_integer_t diameter;
+        igraph_real_t unconnected, assortativity;
         igraph_diameter(&graphs[i], &diameter, NULL, NULL, NULL, 0, 1);
         
         fprintf(info_file, "Diameter;%d\n", diameter);
         
-        fprintf(info_file, "Node;Betwenness;Closeness;Transitivity;Shortest path\n");
+        igraph_assortativity_degree(&graphs[i], &assortativity, 0);
+        fprintf(info_file, "Assortativity;%f\n", assortativity);
         
-        igraph_vector_t betwenness, spath, transitivity, closeness;
+        fprintf(info_file, "Node;Betwenness;Closeness;Transitivity\n");
+        
+        igraph_vector_t betwenness, transitivity, closeness;
         igraph_vector_init(&betwenness, 0);
         igraph_vector_init(&closeness, 0);
         igraph_vector_init(&transitivity, 0);
-        igraph_vector_init(&spath, 0);
-        igraph_real_t unconnected;
         
         igraph_betweenness(&graphs[i], &betwenness, igraph_vss_all(), 0, NULL, 1);
         igraph_closeness(&graphs[i], &closeness, igraph_vss_all(), IGRAPH_ALL, NULL);
         igraph_transitivity_local_undirected(&graphs[i], &transitivity, igraph_vss_all(), IGRAPH_TRANSITIVITY_ZERO);
-        igraph_path_length_hist(&graphs[i], &spath, &unconnected, 0);
         
         /* Classificazione ? */
         for(unsigned int v = 0; v < igraph_vcount(&graphs[i]); v++) {
-            fprintf(info_file, "%d;%f;%f;%f;%f\n", v, VECTOR(betwenness)[v], VECTOR(closeness)[v], VECTOR(transitivity)[v], VECTOR(spath)[v]);
+            fprintf(info_file, "%d;%f;%f;%f\n", v, VECTOR(betwenness)[v], VECTOR(closeness)[v], VECTOR(transitivity)[v]);
         }
         fprintf(info_file, "\n");
         
         igraph_vector_destroy(&betwenness);
         igraph_vector_destroy(&closeness);
         igraph_vector_destroy(&transitivity);
-        igraph_vector_destroy(&spath);
     }    
     
     // Release and free
